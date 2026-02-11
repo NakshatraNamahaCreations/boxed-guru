@@ -1,0 +1,157 @@
+/* ===============================
+   SECTION
+================================ */
+.features-section {
+  padding: 50px 20px;
+  background:
+    radial-gradient(circle at 15% 20%, #eef7f1 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, #f4faf7 0%, transparent 50%),
+    linear-gradient(180deg, #ffffff, #f7fbf9);
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.features-container {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
+}
+
+/* ===============================
+   CARD – PREMIUM FLOATING
+================================ */
+.feature-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  border-radius: 28px;
+  padding: 20px 30px 20px;
+  text-align: center;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* subtle paper grain */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 5px;
+  width: 0%;                /* initial short line */
+  transform: translateX(-50%);
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  transition: width 0.45s ease;
+}
+
+.feature-card:hover::before {
+  width: 200%;               /* expands on hover */
+}
+
+/* HOVER */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 45px 100px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ===============================
+   ICON BADGE
+================================ */
+.feature-image {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e6f4ea, #dff1e6);
+  box-shadow:
+    0 12px 30px rgba(46, 125, 50, 0.25),
+    inset 0 0 0 6px #ffffff;
+}
+
+.feature-image img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* ===============================
+   TITLE
+================================ */
+.feature-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f2f28;
+  letter-spacing: 0.3px;
+  margin-top: 10px;
+}
+
+/* ===============================
+   ACCENT BAR (BOTTOM)
+================================ */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 0;
+  height: 5px;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+}
+
+/* ===============================
+   COLOR VARIANTS
+================================ */
+.feature-card:nth-child(1)::before {
+  background: linear-gradient(90deg, #2e7d32, #66bb6a); /* eco green */
+}
+
+.feature-card:nth-child(2)::before {
+  background: linear-gradient(90deg, #b18e35, #cdbd75); /* premium purple */
+}
+
+.feature-card:nth-child(3)::before {
+  background: linear-gradient(90deg, #ef6c00, #ffb74d); /* food orange */
+}
+
+.feature-card:nth-child(4)::before {
+  background: linear-gradient(90deg, #0277bd, #4fc3f7); /* trust blue */
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 36px 26px;
+  }
+
+  .feature-title {
+    font-size: 17px;
+  }
+}

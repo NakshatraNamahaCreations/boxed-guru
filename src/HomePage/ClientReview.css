@@ -1,0 +1,197 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* ===============================
+   SECTION – FOOD PACKAGING THEME
+================================ */
+.premium-reviews {
+  padding: 60px 20px 120px;
+  background:
+    linear-gradient(180deg, #faf9f6 0%, #ffffff 100%);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.premium-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.premium-tag {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+  color: #2f6b3f;
+  background: #e9f3ec;
+  /* border: 1px solid #cfe3d6; */
+  margin-bottom: 20px;
+}
+
+.premium-header h2 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #1f2f28;
+  margin-bottom: 16px;
+}
+
+.premium-header h2 span {
+  color: #2f6b3f;
+}
+
+.premium-header p {
+  font-size: 16px;
+  color: #5f6f68;
+  max-width: 640px;
+  margin: auto;
+}
+
+/* ===============================
+   SLIDER
+================================ */
+.premium-slider {
+  margin-top: 70px;
+}
+
+.premium-slide {
+  padding: 0 18px;
+}
+
+/* ===============================
+   CARD – PACKAGING STYLE
+================================ */
+.premium-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 50px 42px;
+  position: relative;
+
+  border: 1.5px solid #e6e2d8;
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 40px 70px rgba(0, 0, 0, 0.03);
+}
+
+/* seal strip (like food box label) */
+.premium-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 6px;
+  background: linear-gradient(90deg, #2f6b3f, #6fbf8a);
+  border-radius: 0 0 6px 6px;
+}
+
+/* ===============================
+   QUOTE ICON
+================================ */
+.quote-mark {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 64px;
+  color: #dfe8e2;
+  font-family: serif;
+}
+
+/* ===============================
+   TEXT
+================================ */
+.premium-text {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #344a43;
+  margin-bottom: 36px;
+}
+
+/* ===============================
+   USER – BRAND OWNER STYLE
+================================ */
+.premium-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.premium-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px; /* boxy like packaging */
+  background:
+    linear-gradient(135deg, #2f6b3f, #6fbf8a);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.premium-user h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2f28;
+}
+
+.premium-user span {
+  font-size: 13px;
+  color: #6c7c75;
+}
+
+/* ===============================
+   DOTS – CLEAN FMCG STYLE
+================================ */
+.premium-slider .slick-dots {
+  bottom: -50px;
+}
+
+.premium-slider .slick-dots li button:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #cfd8d2;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.premium-slider .slick-dots li.slick-active button:before {
+  background: #2f6b3f;
+  width: 14px;
+  height: 8px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .premium-header h2 {
+    font-size: 32px;
+  }
+
+  .premium-card {
+    padding: 38px 28px;
+  }
+
+  .premium-text {
+    font-size: 16px;
+  }
+}

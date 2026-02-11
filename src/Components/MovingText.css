@@ -1,0 +1,59 @@
+/* =========================
+   MARQUEE WRAPPER
+========================= */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 14px 0;
+  position: relative;
+}
+
+/* =========================
+   MARQUEE TRACK
+========================= */
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+/* =========================
+   TEXT
+========================= */
+.marquee span {
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4f7f00;
+  padding-right: 40px;
+  letter-spacing: 0.7px;
+}
+
+/* =========================
+   PAUSE ON HOVER
+========================= */
+/* .marquee-wrapper:hover .marquee {
+  animation-play-state: paused;
+} */
+
+/* =========================
+   KEYFRAMES
+========================= */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .marquee span {
+    font-size: 14px;
+  }
+}

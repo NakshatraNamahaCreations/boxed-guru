@@ -1,0 +1,208 @@
+/* ===============================
+   SECTION
+================================ */
+.ps-section {
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top left, #eef3ec 0%, transparent 60%),
+    radial-gradient(circle at bottom right, #f2f6ef 0%, transparent 60%),
+    #ffffff;
+}
+
+.ps-container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* ===============================
+   HEADING
+================================ */
+.ps-kicker {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #1b5e20;
+  background: linear-gradient(135deg, #e6f4ea, #dff1e6);
+  margin-bottom: 22px;
+}
+
+.ps-heading {
+  font-size: 42px;
+  font-weight: 600;
+  color: #132b27;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+
+/* ===============================
+   GRID
+================================ */
+.ps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* ===============================
+   CARD BASE
+================================ */
+.ps-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 46px 44px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.06),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: transform 0.45s ease;
+}
+
+.ps-card:hover {
+  transform: translateY(-6px);
+}
+
+/* CONTENT ABOVE BG IMAGE */
+.ps-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===============================
+   BACKGROUND IMAGE LAYER
+================================ */
+.ps-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+  opacity: 0.12; /* 🔑 adjust visibility */
+  z-index: 1;
+}
+
+/* PROBLEM BG IMAGE */
+.ps-problem::after {
+  background-image: url("../assets/box-guru8.png");
+}
+
+/* SOLUTION BG IMAGE */
+.ps-solution::after {
+  background-image: url("../assets/box-guru9.png");
+}
+
+/* ===============================
+   BADGES
+================================ */
+.ps-problem::before,
+.ps-solution::before {
+  position: absolute;
+  top: 0px;
+  left: 28px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.ps-problem::before {
+  content: "PROBLEM";
+  background: #c0392b;
+}
+
+.ps-solution::before {
+  content: "SOLUTION";
+  background: #4f7f00;
+}
+
+/* ===============================
+   TITLES
+================================ */
+.ps-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #132b27;
+}
+
+/* ===============================
+   TEXT
+================================ */
+.ps-card p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #465a57;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+/* ===============================
+   LISTS
+================================ */
+.ps-card ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.ps-card li {
+  list-style: none;
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #465a57;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* PROBLEM BULLETS */
+.ps-problem li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #c0392b;
+  font-weight: 900;
+}
+
+/* SOLUTION BULLETS */
+.ps-solution li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4f7f00;
+  font-weight: 900;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .ps-grid {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .ps-heading {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ps-card {
+    padding: 36px 28px;
+  }
+
+  .ps-title {
+    font-size: 22px;
+  }
+}

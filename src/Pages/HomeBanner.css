@@ -1,0 +1,137 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* SECTION */
+.hero-slider {
+  width: 100%;
+  overflow: hidden;
+  font-family: 'montserrat', sans-serif;
+}
+
+/* SLIDE */
+.hero-slide {
+  background: linear-gradient(
+    to right,
+    #DDE8C8 0%,
+    #DDE8C8 70%,
+    #638524 70%,
+    #638524 100%
+  );
+}
+
+/* INNER */
+.hero-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+.hero-content {
+  width: 55%;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  color: #4F7F00;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content h1 span {
+  color: #C9A46A;
+}
+
+.hero-content p {
+  max-width: 480px;
+  color: #474747;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: #4F7F00;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-video {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.play-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #274b5a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RIGHT IMAGE SPACE */
+.hero-image-space {
+  width: 45%;
+  min-height: 420px;
+}
+
+.hero-image-space img{
+    width: 650px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* DOTS */
+/* DOT CONTAINER */
+.slick-dots {
+  bottom: 35px;
+  display: flex !important;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* REMOVE DEFAULT */
+.slick-dots li {
+  margin: 0;
+}
+
+.slick-dots li button {
+  padding: 0;
+}
+
+.slick-dots li button:before {
+  content: "";
+  width: 15px;
+  height: 10px;
+  background: #c5db9b;
+  border-radius: 50px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.slick-dots li.slick-active button:before {
+  width: 28px;
+  background: #4F7F00;
+}
+

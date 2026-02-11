@@ -1,0 +1,168 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.container {
+  max-width: 1520px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/*TOP BAR*/
+.top-bar {
+  background: #fff;
+  color: #4F7F00;
+  font-size: 14px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #4e7f004c;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left group */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.top-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Right social icons */
+.top-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-social a {
+  color: #4F7F00;
+  font-size: 14px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 6px 10px;
+}
+
+.top-social a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+
+/* =====================
+   MAIN HEADER
+===================== */
+.main-header {
+  background: #ffffff;
+  border-radius: 0px;
+  margin: 0 auto 0;
+  max-width: 1380px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #4F7F00;
+}
+
+.logo img {
+  width: 38px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-menu a,
+.nav-menu span {
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
+  color: #1d1d1d;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  letter-spacing: 0.8px;
+}
+
+/* Underline */
+.nav-menu a::after,
+.nav-menu span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #4F7F00,
+    #6F8F2E,
+    #C9A46A
+  );
+  border-radius: 2px;
+  transition: width 0.35s ease;
+}
+
+/* Hover */
+.nav-menu a:hover,
+.nav-menu span:hover {
+  color: #4F7F00;
+}
+
+.nav-menu a:hover::after,
+.nav-menu span:hover::after {
+  width: 100%;
+}
+
+
+/* CTA Button */
+.contact-btn {
+  background: #353535;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+  letter-spacing: 0.7px;
+}
+
+.contact-btn:hover {
+  background: #353535;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none;
+  }
+}
