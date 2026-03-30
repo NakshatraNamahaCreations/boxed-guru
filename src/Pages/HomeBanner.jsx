@@ -4,6 +4,7 @@ import { FaArrowLeft, FaArrowRight, FaPlay } from "react-icons/fa";
 import "./HomeBanner.css";
 import boximg from "../assets/box-guru2.png"
 import boximg2 from "../assets/box-guru6.png"
+import Link from "react-router-dom";
 
 const HomeBanner = () => {
   const settings = {
@@ -65,7 +66,7 @@ const HomeBanner = () => {
               </p>
 
               <div className="hero-buttons">
-                <a href="#" className="btn-primary">Explore More</a>
+                <Link to="/about" className="btn-primary">Explore More</Link>
               </div>
             </div>
 

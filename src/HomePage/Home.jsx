@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { FaArrowRight } from "react-icons/fa";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
-import bg1 from "../assets/homebg-1.jpeg";
+// ✅ Desktop Images
+import bg1 from "../assets/homebg-2.jpeg";
 import bg2 from "../assets/homebg-1.jpeg";
 
+// ✅ IMPORTANT: Rename files (NO spaces)
+import bg1Mobile from "../assets/frame-188.png";
+import bg2Mobile from "../assets/frame-189.png";
+
 const HomeSlider = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const settings = {
     dots: true,
     arrows: true,
@@ -24,26 +40,28 @@ const HomeSlider = () => {
         {/* Slide 1 */}
         <div
           className="hero-slide"
-          style={{ backgroundImage: `url(${bg1})` }}
+          style={{
+            backgroundImage: `url(${isMobile ? bg1Mobile : bg1})`,
+          }}
         >
           <div className="hero-overlay" />
           <div className="hero-inner">
             <div className="hero-content">
-                <h1>
-                    Smart Packaging That <br/> Protects 
-                     <span> Builds Your <br/>Brand</span>
-                </h1>
+              <h1>
+                Smart Packaging That <br />
+                Protects <span> Builds Your Brand</span>
+              </h1>
 
-                <p>
-                    Sustainable, tamper-evident packaging solutions<br/> for modern food
-                    brands.
-                </p>
+              <p>
+                Sustainable, tamper-evident packaging solutions
+                <br />
+                for modern food brands.
+              </p>
 
               <div className="hero-buttons">
-                <a href="#" className="btn-primary">Learn More</a>
-                {/* <button className="btn-video">
-                  Discover Products <FaArrowRight />
-                </button> */}
+                <Link to="/about" className="btn-primary">
+                  Learn More
+                </Link>
               </div>
             </div>
           </div>
@@ -52,14 +70,16 @@ const HomeSlider = () => {
         {/* Slide 2 */}
         <div
           className="hero-slides"
-          style={{ backgroundImage: `url(${bg2})` }}
+          style={{
+            backgroundImage: `url(${isMobile ? bg2Mobile : bg2})`,
+          }}
         >
           <div className="hero-overlay" />
           <div className="hero-inner">
             <div className="hero-content">
               <h1>
-                Packaging Built for <br /> Brand  
-                <span> Durability</span>
+                Packaging Built for <br />
+                Brand <span>Durability</span>
               </h1>
 
               <p>
@@ -67,7 +87,9 @@ const HomeSlider = () => {
               </p>
 
               <div className="hero-buttons">
-                <a href="#" className="btn-primary">Explore More</a>
+                <Link to="/about" className="btn-primary">
+                  Explore More
+                </Link>
               </div>
             </div>
           </div>

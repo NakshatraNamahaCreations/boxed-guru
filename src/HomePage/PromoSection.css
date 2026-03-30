@@ -100,6 +100,12 @@
     margin-top: 24px;
     height: 200px;
   }
+
+  .collection-immage img{
+    width: 100%;
+    height: auto !important;
+    object-fit: cover; 
+  }
 }
 
 .collection-card {
@@ -118,7 +124,44 @@
 
 .collection-image img {
   width: 100%;
-  height: 320px;
+  height: auto;
   object-fit: cover; /* change to cover if needed */
   border-radius: 10px;
+}
+
+@media (max-width: 375px) {
+
+  .collection-card {
+    min-height: 200px;
+  }
+
+  .collection-image{
+    height: 200px;
+  }
+
+  .collection-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* change to cover if needed */
+  border-radius: 10px;
+}
+}
+
+
+@media (max-width: 320px) {
+
+  .collection-card {
+    min-height: 200px;
+  }
+
+  .collection-image{
+    height: 200px;
+  }
+
+  .collection-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* change to cover if needed */
+  border-radius: 10px;
+}
 }

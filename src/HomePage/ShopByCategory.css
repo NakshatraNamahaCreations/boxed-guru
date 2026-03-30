@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  cursor: pointer;
+  cursor: auto;
   border: 3px solid transparent;
   position: relative;
 
@@ -63,7 +63,7 @@
    IMAGE
 ================================ */
 .category-circle img {
-  max-width: 120px;
+  max-width: 130px;
   transition: transform 0.4s ease;
 }
 
@@ -237,6 +237,7 @@
   color: #ffffff;
 }
 
+
 /* ===============================
    RESPONSIVE
 ================================ */
@@ -249,30 +250,92 @@
   .category-circle img {
     max-width: 70px;
   }
+
+  .category-head{
+    font-size: 32px;
+  }
+}
+/* SWIPER PAGINATION */
+.swiper {
+  padding-bottom: 60px;
 }
 
-/* ===============================
-   FORCE ARROWS TO BE VISIBLE
-================================ */
-.slick-prev,
-.slick-next {
-  font-size: 0 !important;
-  color: transparent !important;
-  top: 40% !important;
+.swiper-pagination {
+  bottom: 0 !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  top: 250px !important;
 }
 
-/* force arrow icons */
-.slick-prev::before,
-.slick-next::before {
-  font-family: "slick" !important;
-  font-size: 18px !important;
-  line-height: 1 !important;
-  opacity: 1 !important;
-  color: #4f7f00 !important;
+/* dots */
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #cfd9c2;
+  opacity: 1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-/* hover color */
-.slick-prev:hover::before,
-.slick-next:hover::before {
-  color: #1b5e20 !important;
+/* active */
+.swiper-pagination-bullet-active {
+  width: 22px;
+  height: 8px;
+  border-radius: 6px;
+  background: #4f7f00;
+}
+
+/* FLEX PAGINATION WRAPPER */
+.swiper-pagination {
+  position: relative;
+  margin-top: 25px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+/* DEFAULT DOT */
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #cfd9c2;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.35s ease;
+}
+
+/* ACTIVE DOT (EXPANDS LIKE A PILL) */
+.swiper-pagination-bullet-active {
+  width: 26px;
+  height: 8px;
+  border-radius: 10px;
+  background: #4f7f00;
+}
+
+/* SIDE DOTS SCALE */
+.swiper-pagination-bullet-active + .swiper-pagination-bullet,
+.swiper-pagination-bullet:has(+ .swiper-pagination-bullet-active) {
+  transform: scale(1.1);
+}
+
+.swiper-pagination-bullet:hover {
+  transform: scale(1.2);
+  background: #9fbf5f;
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination {
+    gap: 6px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 18px;
+    height: 6px;
+  }
 }

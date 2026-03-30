@@ -1,7 +1,7 @@
 import "./PromoSection.css";
-import promo1 from "../assets/promo-9.jpeg";
-import promo2 from "../assets/promo-8.jpeg";
-import promo3 from "../assets/promo-7.jpeg"
+import promo1 from "../assets/promo-1.jpeg";
+import promo2 from "../assets/promo-3.jpeg";
+import promo3 from "../assets/promo-2.jpeg"
 
 
 export default function PromoSection() {

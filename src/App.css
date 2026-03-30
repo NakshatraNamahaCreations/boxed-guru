@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 } */
+
+
+html {
+  scroll-behavior: auto !important;
+}
+
+
+body {
+  scroll-behavior: auto;
+}

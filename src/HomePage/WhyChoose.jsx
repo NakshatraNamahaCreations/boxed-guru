@@ -34,7 +34,7 @@ const WhyChoose = () => {
           </p>
 
           <p>
-            At <strong>Boxed Guru</strong>, we believe that it doesn’t have to be
+            At <strong>Boxed Guru Packaging</strong>, we believe that it doesn’t have to be
             that way. Our journey began with a simple realization — that the
             food delivery industry needs to take a step towards a safe and
             sustainable overhaul.

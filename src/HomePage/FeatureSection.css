@@ -17,7 +17,7 @@
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 34px;
+  gap: 10px;
 }
 
 /* ===============================
@@ -70,8 +70,8 @@
    ICON BADGE
 ================================ */
 .feature-image {
-  width: 86px;
-  height: 86px;
+  width: 76px;
+  height: 76px;
   margin: 0 auto 22px;
   border-radius: 50%;
   display: flex;
@@ -145,10 +145,11 @@
 @media (max-width: 640px) {
   .features-container {
     grid-template-columns: 1fr;
+    padding:0 10px;
   }
 
   .feature-card {
-    padding: 36px 26px;
+    padding: 6px 36px;
   }
 
   .feature-title {

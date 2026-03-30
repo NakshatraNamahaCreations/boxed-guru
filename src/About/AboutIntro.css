@@ -1,0 +1,235 @@
+.aboutLuxury {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8f6 100%);
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* GRID */
+
+.aboutLuxuryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+
+.aboutLabel {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #1b5e20;
+  background: linear-gradient(135deg, #e6f4ea, #dff1e6);
+  margin-bottom: 22px;
+}
+
+
+
+.aboutLuxuryContent h2 {
+  font-size: 40px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #122826;
+  font-weight: 700;
+}
+
+.aboutLuxuryContent p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.aboutBtn {
+  padding: 14px 30px;
+  background: #1b5e20;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.aboutBtn:hover {
+  background: #134618;
+}
+
+/* RIGHT IMAGE */
+
+.aboutLuxuryImageWrapper {
+  position: relative;
+}
+
+.imageBorder {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #1b5e20;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.aboutLuxuryImage {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* FLOATING CARD */
+
+.floatingCard {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  background: white;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  z-index: 3;
+  border-left: 4px solid #1b5e20;
+}
+
+.floatingCard h4 {
+  margin-bottom: 5px;
+  color: #1b5e20;
+}
+
+.floatingCard p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===============================
+   TABLET
+================================ */
+@media (max-width: 1024px) {
+  .aboutLuxuryGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .aboutLuxuryContent {
+    text-align: center;
+  }
+
+  .aboutLuxuryContent p {
+    margin: auto;
+  }
+
+  .aboutLuxuryImage {
+    height: 320px;
+  }
+
+  .imageBorder {
+    top: -15px;
+    right: -15px;
+  }
+
+  .floatingCard {
+    left: 10px;
+    bottom: -20px;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .aboutLuxury {
+    padding: 60px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .aboutLuxuryGrid {
+    gap: 40px;
+  }
+
+  /* TEXT */
+  .aboutLuxuryContent h2 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .aboutLuxuryContent p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .aboutLabel {
+    font-size: 10px;
+    padding: 6px 14px;
+  }
+
+  /* IMAGE */
+  .aboutLuxuryImage {
+    height: 260px;
+  }
+
+  .imageBorder {
+    top: -10px;
+    right: -10px;
+    border-width: 2px;
+  }
+
+  /* FLOATING CARD FIX */
+  .floatingCard {
+    position: relative;   /* 🔥 important */
+    bottom: auto;
+    left: auto;
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+@media (max-width: 480px) {
+  .aboutLuxury {
+    padding: 50px 0;
+  }
+
+  .aboutLuxuryContent h2 {
+    font-size: 28px;
+  }
+
+  .aboutLuxuryContent p {
+    font-size: 13px;
+  }
+
+  .aboutLuxuryImage {
+    height: 220px;
+  }
+
+  .floatingCard {
+    padding: 15px 18px;
+  }
+
+  .floatingCard h4 {
+    font-size: 14px;
+  }
+
+  .floatingCard p {
+    font-size: 12px;
+  }
+}

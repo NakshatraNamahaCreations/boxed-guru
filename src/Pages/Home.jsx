@@ -15,6 +15,7 @@ import MovingText from "../Components/MovingText"
 import ClientReview from "../HomePage/ClientReview";
 import PromoSection from "../HomePage/PromoSection";
 import Products from "../HomePage/Products";
+import SpotlightBanner from "../HomePage/SpotlightBanner";
 
 
 
@@ -34,6 +35,7 @@ export default function Home(){
         <ShopByCategory/>
         {/* <OurProducts/> */}
         <Products/>
+        <SpotlightBanner/>
         <WhoWeAre/>
         
         <WhyChoose/>

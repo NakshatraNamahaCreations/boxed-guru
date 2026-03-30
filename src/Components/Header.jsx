@@ -1,87 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
-import {
- 
-  FaEnvelope,
-  
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
-  FaLocationArrow
-} from "react-icons/fa6";
-import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
-   
-      {/* Top Info Bar */}
-     <div className="top-bar">
-  <div className="container top-bar-content">
-    
-    {/* Left Info */}
-    <div className="top-left">
-      <div className="top-item">
-        <FaPhoneAlt/>
-        <span>+91 9900009022</span>
-      </div>
-
-      <div className="top-item">
-        <FaEnvelope />
-        <span>sandeep@theboxed.guru</span>
-      </div>
-
-      <div className="top-item">
-       <FaLocationArrow/>
-        <span>Bangalore</span>
-      </div>
-    </div>
-
-    {/* Right Social Icons */}
-    <div className="top-social">
-      <a href="#"><FaFacebookF /></a>
-      <a href="#"><FaInstagram /></a>
-      <a href="#"><FaLinkedinIn /></a>
-      <a href="#"><FaXTwitter /></a>
-    </div>
-
-  </div>
-</div>
-
-
-      {/* Main Header */}
       <header className="main-header">
         <div className="container header-inner">
+
           {/* Logo */}
           <div className="logo">
-            {/* <img src={logo} alt="Packega" /> */}
-            <Link to="/" style={{color: "#4F7F00", textDecoration:"none"}}>
-            <span>BOXED GURU PACKAGING LLP</span>
+            <Link to="/" className="logo-text">
+              BOXED GURU PACKAGING LLP
             </Link>
           </div>
 
-          {/* Navigation */}
+          {/* Desktop Menu */}
           <nav className="nav-menu">
-            <a href="/">Home</a>
-            <a href="/about">About Us</a>
-            <div className="dropdown">
-              <span>Services</span>
-            </div>
-            <div className="dropdown">
-              <span>Products</span>
-            </div>
+            <Link to="/">Home</Link>
+            <Link to="/about">About Us</Link>
+            {/* <Link to="/certificates">Our Certifications</Link> */}
+            <Link to="/products">Products</Link>
           </nav>
 
           {/* CTA */}
-          <a href="/contact" className="contact-btn">
+          <Link to="/contact-us" className="contact-btn">
             Contact Us
-          </a>
+          </Link>
+
+          {/* Hamburger */}
+          <div className="hamburger" onClick={() => setMenuOpen(true)}>
+            <FaBars />
+          </div>
         </div>
       </header>
+
+      {/* Overlay */}
+      <div
+        className={`overlay ${menuOpen ? "show" : ""}`}
+        onClick={() => setMenuOpen(false)}
+      ></div>
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        <div className="mobile-header">
+          
+          <FaTimes onClick={() => setMenuOpen(false)} />
+        </div>
+
+        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+        {/* <Link to="/certificates" onClick={() => setMenuOpen(false)}>Certifications</Link> */}
+        <Link to="/products" onClick={() => setMenuOpen(false)}>Products</Link>
+
+       <Link 
+  to="/contact-us" 
+  className="mobile-contact-btn"
+  onClick={() => setMenuOpen(false)}
+>
+          Contact Us
+        </Link>
+      </div>
     </>
   );
 };

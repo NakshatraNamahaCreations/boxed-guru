@@ -95,3 +95,10 @@ button:focus-visible {
   font-weight: 700;
   font-style: normal;
 }
+
+
+
+html {
+  scroll-behavior: auto;
+}
+

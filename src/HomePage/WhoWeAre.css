@@ -185,14 +185,22 @@
 
 @media (max-width: 640px) {
   .who-section {
-    padding: 90px 16px;
+    padding: 30px 16px;
   }
 
   .who-title {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .who-header {
     margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

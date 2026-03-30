@@ -5,8 +5,10 @@ import lowMinImg from "../assets/biodegradable.png";
 import sustainableImg from "../assets/recycle-sign.png";
 import customImg from "../assets/brand.png";
 import quickImg from "../assets/shield.png";
+import iso from "../assets/iso-cer.png"
 
 export default function FeaturesSection() {
+   const isMobile = window.innerWidth <= 768;
   const features = [
     {
       image: lowMinImg,
@@ -28,19 +30,22 @@ export default function FeaturesSection() {
       title: "Tamper-Proof",
       animation: "flip-up",
     },
+   
   ];
 
   return (
     <section className="features-section">
       <div className="features-container">
         {features.map((item, index) => (
-          <div
+         <div
             className="feature-card"
             key={index}
-            data-aos={item.animation}
-            data-aos-delay={index * 120}
-            data-aos-duration="800"
-            data-aos-easing="ease-out-cubic"
+            {...(!isMobile && {
+              "data-aos": item.animation,
+              "data-aos-delay": index * 120,
+              "data-aos-duration": "800",
+              "data-aos-easing": "ease-out-cubic",
+            })}
           >
             <div className="feature-image">
               <img src={item.image} alt={item.title} />

@@ -1,46 +1,77 @@
 /* =========================
-   MARQUEE WRAPPER
+   WRAPPER
 ========================= */
-.marquee-wrapper {
+.review-marquee-wrapper {
+  display: flex;
   width: 100%;
   overflow: hidden;
-  background: #ffffff;
-  padding: 14px 0;
+  background: #f9f9f9;
+  align-items: center;
   position: relative;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 /* =========================
-   MARQUEE TRACK
+   STATIC LABEL
 ========================= */
-.marquee {
+.review-label {
+  background: linear-gradient(135deg, #4f7f00, #2e5200);
+  color: white;
+  padding: 14px 25px;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* =========================
+   MARQUEE CONTAINER
+========================= */
+.review-marquee {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+
+/* =========================
+   MOVING TRACK
+========================= */
+.review-track {
   display: flex;
   width: max-content;
-  animation: scroll 25s linear infinite;
+  animation: scrollReviews 30s linear infinite;
 }
 
-/* =========================
-   TEXT
-========================= */
-.marquee span {
-  white-space: nowrap;
-  font-size: 12px;
-  font-weight: 600;
-  color: #4f7f00;
-  padding-right: 40px;
-  letter-spacing: 0.7px;
-}
-
-/* =========================
-   PAUSE ON HOVER
-========================= */
-/* .marquee-wrapper:hover .marquee {
+.review-marquee:hover .review-track {
   animation-play-state: paused;
-} */
+}
+
+/* =========================
+   TEXT STYLE
+========================= */
+.review-track span {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.star-icon {
+  color: #f4b400;
+}
 
 /* =========================
    KEYFRAMES
 ========================= */
-@keyframes scroll {
+@keyframes scrollReviews {
   from {
     transform: translateX(0);
   }
@@ -50,10 +81,17 @@
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE
 ========================= */
 @media (max-width: 768px) {
-  .marquee span {
-    font-size: 14px;
+
+  .review-label {
+    font-size: 12px;
+    padding: 12px 16px;
+  }
+
+  .review-track span {
+    font-size: 13px;
+    padding-right: 30px;
   }
 }

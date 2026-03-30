@@ -1,0 +1,240 @@
+/* ===============================
+   BOXED GURU CONTACT PROMO
+   LIGHT PREMIUM VERSION
+================================ */
+
+.boxedContactPromo {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8f6 100%);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+}
+
+/* Overlay disabled for light version */
+.contactOverlay {
+  display: none;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===============================
+   GRID LAYOUT
+================================ */
+
+.contactGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: center;
+  color: #111;
+}
+
+/* ===============================
+   IMAGE SECTION
+================================ */
+
+.contactImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PARALLELOGRAM BACKGROUND */
+.contactImage::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 85%;
+  background: linear-gradient(
+    135deg,
+    #dcf9e2,
+    #b9d5bf
+  );
+  transform: skewX(-15deg);
+  border-radius: 20px;
+  z-index: 0;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.contactImage img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 420px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12));
+}
+
+
+/* ===============================
+   CONTENT
+================================ */
+
+.contactContent h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  color: #122826;
+  font-weight: 700;
+}
+
+.contactContent p {
+  color: #555;
+  max-width: 520px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ===============================
+   DIVIDER
+================================ */
+
+.contactDivider {
+  width: 200px;
+  height: 2px;
+  margin: 25px 0;
+  background: repeating-linear-gradient(
+    to right,
+    #1b5e20,
+    #1b5e20 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  opacity: 0.7;
+}
+
+/* ===============================
+   CONTACT CARDS WRAPPER
+================================ */
+
+.contactCards {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   CONTACT CARD
+================================ */
+
+.contactCard {
+  background: #ffffff;
+  color: #111;
+  padding: 16px 26px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 240px;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Secondary (Green) Card */
+
+.contactCard.dark {
+  background: #1b5e20;
+  color: white;
+  border: none;
+}
+
+/* Hover Effects */
+
+.contactCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+}
+
+.contactCard.dark:hover {
+  background: #134618;
+}
+
+/* ===============================
+   ICON
+================================ */
+
+.contactIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #1b5e20;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+}
+
+.contactCard.dark .contactIcon {
+  background: white;
+  color: #1b5e20;
+}
+
+/* ===============================
+   TEXT
+================================ */
+
+.contactCard h4 {
+  font-size: 14px;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.contactCard span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contactImage {
+    order: 2;
+  }
+
+  .contactContent {
+    order: 1;
+  }
+
+  .contactDivider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contactCards {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .contactContent h2 {
+    font-size: 28px;
+  }
+
+  .contactCard {
+    width: 100%;
+    justify-content: center;
+  }
+}

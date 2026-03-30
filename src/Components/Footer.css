@@ -1,146 +1,186 @@
-/* ===============================
-   BASE
-================================ */
+/* =====================================
+   BASE FOOTER (LUXURY BACKGROUND)
+===================================== */
+
 .footer {
-  background: linear-gradient(180deg, #0f2f28 0%, #123a31 100%);
+  position: relative;
+  background:
+    radial-gradient(circle at 85% -10%, rgba(127,227,162,0.18), transparent 40%),
+    radial-gradient(circle at -10% 110%, rgba(255,255,255,0.05), transparent 50%),
+    linear-gradient(180deg, #061915 0%, #0b2621 60%, #071c18 100%);
   font-family: "Poppins", sans-serif;
-  color: #e4f1ec;
+  color: #e6f3ee;
+  overflow: hidden;
+  max-width: 1480px;
+  margin: auto;
+  border-radius: 50px;
 }
 
-/* ===============================
-   TOP BAR
-================================ */
+/* subtle luxury overlay */
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04), transparent 40%);
+  pointer-events: none;
+}
+
+/* =====================================
+   TOP SECTION
+===================================== */
+
 .footer-top {
-  padding: 60px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(180deg, #0f2f28 0%, #123a31 100%);
+  padding: 50px 20px 40px;
 }
 
 .footer-top-inner {
   max-width: 1280px;
   margin: auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 40px;
-  align-items: flex-start;
+  grid-template-columns:  1fr 1fr 1fr;
+  gap: 60px;
 }
 
-/* ===============================
-   BRAND
-================================ */
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-}
+/* =====================================
+   BRAND AREA
+===================================== */
 
 .footer-brand h3 {
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 800;
   color: #7fe3a2;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
 }
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #9ccbbd;
+  max-width: 360px;
+  margin-bottom: 22px;
+}
+
+/* SOCIAL ICONS */
 
 .footer-socials {
   display: flex;
   gap: 12px;
+  margin-top: 10px;
 }
 
+
 .footer-socials a {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.06);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #7fe3a2;
-  transition: all 0.3s ease;
+  transition: 0.35s ease;
 }
 
 .footer-socials a:hover {
   background: #7fe3a2;
-  color: #0f2f28;
-  transform: translateY(-4px);
+  color: #071c18 !important;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(127,227,162,0.35);
 }
 
-/* ===============================
-   INFO BLOCKS
-================================ */
+/* =====================================
+   CONTACT CARDS (GLASS STYLE)
+===================================== */
+
 .footer-info {
   display: flex;
-  gap: 14px;
-  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.35s ease;
 }
 
-.footer-info > div:last-child {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.footer-info:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
 
 .info-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
   background: linear-gradient(135deg, #2e7d32, #66bb6a);
-  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  color: #fff;
 }
 
 .footer-info span {
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #7fb7a6;
   font-weight: 600;
-  color: #a8cfc2;
-  line-height: 1.3;
 }
 
 .footer-info p {
   font-size: 14px;
-  margin: 0;
-  color: #e4f1ec;
-  line-height: 1.5;
+  margin: 3px 0 0;
 }
 
-/* ===============================
-   DIVIDER
-================================ */
+/* =====================================
+   PREMIUM DIVIDER
+===================================== */
+
 .footer-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.08);
+  max-width: 1100px;
+  margin: 20px auto;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
 }
 
-/* ===============================
+/* =====================================
    LINKS SECTION
-================================ */
+===================================== */
+
 .footer-links {
-  padding: 60px 20px;
+  padding: 60px 20px 70px;
 }
 
 .footer-links-inner {
-  max-width: 1100px;
+  max-width: 1280px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
 }
 
 .footer-links h4 {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
   margin-bottom: 18px;
   color: #e9f7f1;
+  text-transform: uppercase;
 }
 
 .footer-links a {
   display: block;
   font-size: 14px;
-  color: #a8cfc2;
-  margin-bottom: 12px;
+  color: #9ccbbd;
+  margin-bottom: 10px;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: 0.25s ease;
 }
 
 .footer-links a:hover {
@@ -148,24 +188,27 @@
   transform: translateX(6px);
 }
 
-/* ===============================
-   BOTTOM
-================================ */
+/* =====================================
+   BOTTOM BAR
+===================================== */
+
 .footer-bottom {
-  padding: 22px;
+  padding: 24px;
   text-align: center;
   font-size: 13px;
-  color: #a8cfc2;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #7fb7a6;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.15);
+  backdrop-filter: blur(6px);
 }
 
-/* ===============================
+/* =====================================
    RESPONSIVE
-================================ */
+===================================== */
+
 @media (max-width: 1024px) {
   .footer-top-inner {
     grid-template-columns: 1fr 1fr;
-    row-gap: 40px;
   }
 
   .footer-brand {
@@ -178,12 +221,16 @@
 }
 
 @media (max-width: 640px) {
-  .footer-top-inner {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  
+  .footer-links-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
   }
 
-  .footer-links-inner {
+  .footer-top-inner{
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 20px;
   }
 }
